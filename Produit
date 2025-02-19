@@ -1,0 +1,23 @@
+"""
+Classe : Produit
+Module :
+Description : 
+"""
+class Produit():
+  """ Permet d'avoir une ossature pour toutes mes classe """
+  def __init__(self, codeUnique, prixHT, quantite):
+    """Constructeur avec passage des valeurs pour les attributs"""
+    self.codeUnique = codeUnique
+    self.prixHT = prixHT
+    self.quantite = quantite
+
+  def __str__(self):
+    """ Methode pour l'affichge de la classe """
+    chaine = "Le produit " + self.codeUnique  + " coute " + str(self.prixHT) + " hors taxe \n"
+    chaine = chaine + "Il est disponible en " + str(self.quantite) + " exemplaire(s) \n"
+    return chaine
+
+if __name__ == '__main__':
+  """ Permet d'executer le code localement """
+  maClasseProduit = Produit("ALI002", 12.5, 40)
+  print(maClasseProduit)
